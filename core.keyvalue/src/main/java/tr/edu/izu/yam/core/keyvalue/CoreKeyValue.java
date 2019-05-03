@@ -3,7 +3,6 @@ package tr.edu.izu.yam.core.keyvalue;
 import java.io.Serializable;
 import java.util.Date;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -15,371 +14,372 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "core_keyvalue")
-public class CoreKeyValue implements Serializable  {
+public class CoreKeyValue implements Serializable {
 
 	private static final long serialVersionUID = 3404264584217623947L;
-	
+
 	@Id
- 	@Basic
+	@Basic
 	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-    @Basic
-    @Column(name = "ORDERNO", nullable = true)
-    private int orderNo;
-
-    @Basic
-    @Column(name = "CODE", nullable = true)
-    private String code;
-
-    @Basic
-    @Column(name = "VALUE", nullable = true)
-    private String value;
-
-    @Basic
-    @Column(name = "SHORTVALUE", nullable = true)
-    private String shortValue;
-
-    @Basic
-    @Column(name = "STATUS", nullable = true)
-    private String status;
-
-    @Basic
-    @Column(name = "CK_01", nullable = true)
-    private int ck_01;
-
-    @Basic
-    @Column(name = "CK_02", nullable = true)
-    private int ck_02;
-
-    @Basic
-    @Column(name = "CK_03", nullable = true)
-    private int ck_03;
-
-    @Basic
-    @Column(name = "CK_04", nullable = true)
-    private int ck_04;
-
-    @Basic
-    @Column(name = "CK_05", nullable = true)
-    private int ck_05;
-
-    @Basic
-    @Column(name = "CK_06", nullable = true)
-    private int ck_06;
-
-    @Basic
-    @Column(name = "CK_07", nullable = true)
-    private int ck_07;
-
-    @Basic
-    @Column(name = "CK_08", nullable = true)
-    private int ck_08;
-
-    @Basic
-    @Column(name = "CK_09", nullable = true)
-    private int ck_09;
-
-    @Basic
-    @Column(name = "CK_10", nullable = true)
-    private int ck_10;
-
-    @Basic
-    @Column(name = "DESC_01", nullable = true)
-    private String desc_01;
-
-    @Basic
-    @Column(name = "DESC_02", nullable = true)
-    private String desc_02;
-
-    @Basic
-    @Column(name = "DESC_03", nullable = true)
-    private String desc_03;
-
-    @Basic
-    @Column(name = "DESC_04", nullable = true)
-    private String desc_04;
-
-    @Basic
-    @Column(name = "DESC_05", nullable = true)
-    private String desc_05;
-
-    @Basic
-    @Column(name = "DESC_06", nullable = true)
-    private String desc_06;
-
-    @Basic
-    @Column(name = "DESC_07", nullable = true)
-    private String desc_07;
-
-    @Basic
-    @Column(name = "DESC_08", nullable = true)
-    private String desc_08;
-
-    @Basic
-    @Column(name = "DESC_09", nullable = true)
-    private String desc_09;
-
-    @Basic
-    @Column(name = "DESC_10", nullable = true)
-    private String desc_10;
-
-    @Basic
-    @Column(name = "INT_01", nullable = true)
-    private long int_01;
 
-    @Basic
-    @Column(name = "INT_02", nullable = true)
-    private long int_02;
+	@Basic
+	@Column(name = "ORDERNO", nullable = true)
+	private Integer orderNo;
 
-    @Basic
-    @Column(name = "INT_03", nullable = true)
-    private int int_03;
+	@Basic
+	@Column(name = "CODE", nullable = true)
+	private String code;
 
-    @Basic
-    @Column(name = "INT_04", nullable = true)
-    private int int_04;
+	@Basic
+	@Column(name = "VALUE", nullable = true)
+	private String value;
 
-    @Basic
-    @Column(name = "INT_05", nullable = true)
-    private int int_05;
+	@Basic
+	@Column(name = "SHORTVALUE", nullable = true)
+	private String shortValue;
 
-    @Basic
-    @Column(name = "INT_06", nullable = true)
-    private int int_06;
+	@Basic
+	@Column(name = "STATUS", nullable = true)
+	private String status;
 
-    @Basic
-    @Column(name = "INT_07", nullable = true)
-    private int int_07;
-
-    @Basic
-    @Column(name = "INT_08", nullable = true)
-    private int int_08;
-
-    @Basic
-    @Column(name = "INT_09", nullable = true)
-    private int int_09;
-
-    @Basic
-    @Column(name = "INT_10", nullable = true)
-    private int int_10;
-
-    @Basic
-    @Column(name = "MON_01", nullable = true)
-    private BigDecimal mon_01;
-
-    @Basic
-    @Column(name = "MON_02", nullable = true)
-    private BigDecimal mon_02;
-
-    @Basic
-    @Column(name = "MON_03", nullable = true)
-    private BigDecimal mon_03;
-
-    @Basic
-    @Column(name = "MON_04", nullable = true)
-    private BigDecimal mon_04;
-
-    @Basic
-    @Column(name = "MON_05", nullable = true)
-    private BigDecimal mon_05;
-
-    @Basic
-    @Column(name = "MON_06", nullable = true)
-    private BigDecimal mon_06;
-
-    @Basic
-    @Column(name = "MON_07", nullable = true)
-    private BigDecimal mon_07;
-
-    @Basic
-    @Column(name = "MON_08", nullable = true)
-    private BigDecimal mon_08;
-
-    @Basic
-    @Column(name = "MON_09", nullable = true)
-    private BigDecimal mon_09;
-
-    @Basic
-    @Column(name = "MON_10", nullable = true)
-    private BigDecimal mon_10;
-
-    @Basic
-    @Column(name = "DATE_01", nullable = true)
-    private Timestamp date_01;
-
-    @Basic
-    @Column(name = "DATE_02", nullable = true)
-    private Timestamp date_02;
-
-    @Basic
-    @Column(name = "DATE_03", nullable = true)
-    private Timestamp date_03;
-
-    @Basic
-    @Column(name = "DATE_04", nullable = true)
-    private Timestamp date_04;
-
-    @Basic
-    @Column(name = "DATE_05", nullable = true)
-    private Date date_05;
-
-    @Basic
-    @Column(name = "CK_OWNER", nullable = true)
-    private int ck_owner;
-
-    @Basic
-    @Column(name = "ENTITY_TYPE_ID", nullable = true)
-    private int entity_type_id;
-
-    @Basic
-    @Column(name = "DESCRİPTİON", nullable = true)
-    private String description;
-
-    @Basic
-    @Column(name = "BYTE_01", nullable = true)
-    private byte[] byte_01;
-
-    @Basic
-    @Column(name = "BYTE_01_NAME", nullable = true)
-    private String byte_01_name;
-
-    @Basic
-    @Column(name = "VALUE_01", nullable = true)
-    private String value_01;
-
-    @Basic
-    @Column(name = "VALUE_02", nullable = true)
-    private String value_02;
-
-    @Basic
-    @Column(name = "VALUE_03", nullable = true)
-    private String value_03;
-
-    @Basic
-    @Column(name = "VALUE_04", nullable = true)
-    private String value_04;
-
-    @Basic
-    @Column(name = "VALUE_05", nullable = true)
-    private String value_05;
-
-    @Basic
-    @Column(name = "VALUE_06", nullable = true)
-    private String value_06;
-
-    @Basic
-    @Column(name = "VALUE_07", nullable = true)
-    private String value_07;
-
-    @Basic
-    @Column(name = "VALUE_08", nullable = true)
-    private String value_08;
-
-    @Basic
-    @Column(name = "VALUE_09", nullable = true)
-    private String value_09;
-
-    @Basic
-    @Column(name = "VALUE_10", nullable = true)
-    private String value_10;
-
-    @Basic
-    @Column(name = "LOCKED", nullable = true)
-    private String locked;
-
-    @Basic
-    @Column(name = "CK_11", nullable = true)
-    private int ck_11;
-
-    @Basic
-    @Column(name = "CK_12", nullable = true)
-    private int ck_12;
-
-    @Basic
-    @Column(name = "CK_13", nullable = true)
-    private int ck_13;
-
-    @Basic
-    @Column(name = "CK_14", nullable = true)
-    private int ck_14;
-
-    @Basic
-    @Column(name = "CK_15", nullable = true)
-    private int ck_15;
-
-    @Basic
-    @Column(name = "BOOL_1", nullable = true)
-    private boolean bool_1;
-
-    @Basic
-    @Column(name = "BOOL_2", nullable = true)
-    private boolean bool_2;
-
-    @Basic
-    @Column(name = "BOOL_3", nullable = true)
-    private boolean bool_3;
-
-    @Basic
-    @Column(name = "BOOL_4", nullable = true)
-    private boolean bool_4;
-
-    @Basic
-    @Column(name = "BOOL_5", nullable = true)
-    private boolean bool_5;
-
-    @Basic
-    @Column(name = "BOOL_6", nullable = true)
-    private boolean bool_6;
-
-    @Basic
-    @Column(name = "BOOL_7", nullable = true)
-    private boolean bool_7;
-
-    @Basic
-    @Column(name = "BOOL_8", nullable = true)
-    private boolean bool_8;
-
-    @Basic
-    @Column(name = "BOOL_9", nullable = true)
-    private boolean bool_9;
-
-    @Basic
-    @Column(name = "BOOL_10", nullable = true)
-    private boolean bool_10;
-
-    @Basic
-    @Column(name = "BYTE_02", nullable = true)
-    private byte[] byte_02;
-
-    @Basic
-    @Column(name = "BYTE_02_NAME", nullable = true)
-    private String byte_02_name;
-
-    @Basic
-    @Column(name = "BOOL_11", nullable = true)
-    private String bool_11;
-
-    @Basic
-    @Column(name = "DATE_06", nullable = true)
-    private Timestamp date_06;
-
-    @Basic
-    @Column(name = "DATE_07", nullable = true)
-    private Timestamp date_07;
-
-    @Basic
-    @Column(name = "DATE_08", nullable = true)
-    private Timestamp date_08;
-
-    @Basic
-    @Column(name = "BYTE_03", nullable = true)
-    private byte[] byte_03;
-
-    @Basic
-    @Column(name = "BYTE_03_NAME", nullable = true)
-    private String byte_03_name;
+	@Basic
+	@Column(name = "CK_01", nullable = true)
+	//Buraya(referans olan yerlere) hibernate mappingler ile ekleyerek tekrar commit edilecek
+	private CoreKeyValue ck_01;
+
+	@Basic
+	@Column(name = "CK_02", nullable = true)
+	private CoreKeyValue ck_02;
+
+	@Basic
+	@Column(name = "CK_03", nullable = true)
+	private CoreKeyValue ck_03;
+
+	@Basic
+	@Column(name = "CK_04", nullable = true)
+	private CoreKeyValue ck_04;
+
+	@Basic
+	@Column(name = "CK_05", nullable = true)
+	private CoreKeyValue ck_05;
+
+	@Basic
+	@Column(name = "CK_06", nullable = true)
+	private CoreKeyValue ck_06;
+
+	@Basic
+	@Column(name = "CK_07", nullable = true)
+	private CoreKeyValue ck_07;
+
+	@Basic
+	@Column(name = "CK_08", nullable = true)
+	private CoreKeyValue ck_08;
+
+	@Basic
+	@Column(name = "CK_09", nullable = true)
+	private CoreKeyValue ck_09;
+
+	@Basic
+	@Column(name = "CK_10", nullable = true)
+	private CoreKeyValue ck_10;
+
+	@Basic
+	@Column(name = "DESC_01", nullable = true)
+	private String desc_01;
+
+	@Basic
+	@Column(name = "DESC_02", nullable = true)
+	private String desc_02;
+
+	@Basic
+	@Column(name = "DESC_03", nullable = true)
+	private String desc_03;
+
+	@Basic
+	@Column(name = "DESC_04", nullable = true)
+	private String desc_04;
+
+	@Basic
+	@Column(name = "DESC_05", nullable = true)
+	private String desc_05;
+
+	@Basic
+	@Column(name = "DESC_06", nullable = true)
+	private String desc_06;
+
+	@Basic
+	@Column(name = "DESC_07", nullable = true)
+	private String desc_07;
+
+	@Basic
+	@Column(name = "DESC_08", nullable = true)
+	private String desc_08;
+
+	@Basic
+	@Column(name = "DESC_09", nullable = true)
+	private String desc_09;
+
+	@Basic
+	@Column(name = "DESC_10", nullable = true)
+	private String desc_10;
+
+	@Basic
+	@Column(name = "INT_01", nullable = true)
+	private Long int_01;
+
+	@Basic
+	@Column(name = "INT_02", nullable = true)
+	private Long int_02;
+
+	@Basic
+	@Column(name = "INT_03", nullable = true)
+	private Integer int_03;
+
+	@Basic
+	@Column(name = "INT_04", nullable = true)
+	private Integer int_04;
+
+	@Basic
+	@Column(name = "INT_05", nullable = true)
+	private Integer int_05;
+
+	@Basic
+	@Column(name = "INT_06", nullable = true)
+	private Integer int_06;
+
+	@Basic
+	@Column(name = "INT_07", nullable = true)
+	private Integer int_07;
+
+	@Basic
+	@Column(name = "INT_08", nullable = true)
+	private Integer int_08;
+
+	@Basic
+	@Column(name = "INT_09", nullable = true)
+	private Integer int_09;
+
+	@Basic
+	@Column(name = "INT_10", nullable = true)
+	private Integer int_10;
+
+	@Basic
+	@Column(name = "MON_01", nullable = true)
+	private BigDecimal mon_01;
+
+	@Basic
+	@Column(name = "MON_02", nullable = true)
+	private BigDecimal mon_02;
+
+	@Basic
+	@Column(name = "MON_03", nullable = true)
+	private BigDecimal mon_03;
+
+	@Basic
+	@Column(name = "MON_04", nullable = true)
+	private BigDecimal mon_04;
+
+	@Basic
+	@Column(name = "MON_05", nullable = true)
+	private BigDecimal mon_05;
+
+	@Basic
+	@Column(name = "MON_06", nullable = true)
+	private BigDecimal mon_06;
+
+	@Basic
+	@Column(name = "MON_07", nullable = true)
+	private BigDecimal mon_07;
+
+	@Basic
+	@Column(name = "MON_08", nullable = true)
+	private BigDecimal mon_08;
+
+	@Basic
+	@Column(name = "MON_09", nullable = true)
+	private BigDecimal mon_09;
+
+	@Basic
+	@Column(name = "MON_10", nullable = true)
+	private BigDecimal mon_10;
+
+	@Basic
+	@Column(name = "DATE_01", nullable = true)
+	private Date date_01;
+
+	@Basic
+	@Column(name = "DATE_02", nullable = true)
+	private Date date_02;
+
+	@Basic
+	@Column(name = "DATE_03", nullable = true)
+	private Date date_03;
+
+	@Basic
+	@Column(name = "DATE_04", nullable = true)
+	private Date date_04;
+
+	@Basic
+	@Column(name = "DATE_05", nullable = true)
+	private Date date_05;
+
+	@Basic
+	@Column(name = "CK_OWNER", nullable = true)
+	private CoreKeyValue ck_owner;
+
+	@Basic
+	@Column(name = "ENTITY_TYPE_ID", nullable = true)
+	private Long entity_type_id;
+
+	@Basic
+	@Column(name = "DESCRIPTION", nullable = true)
+	private String description;
+
+	@Basic
+	@Column(name = "BYTE_01", nullable = true)
+	private byte[] byte_01;
+
+	@Basic
+	@Column(name = "BYTE_01_NAME", nullable = true)
+	private String byte_01_name;
+
+	@Basic
+	@Column(name = "VALUE_01", nullable = true)
+	private String value_01;
+
+	@Basic
+	@Column(name = "VALUE_02", nullable = true)
+	private String value_02;
+
+	@Basic
+	@Column(name = "VALUE_03", nullable = true)
+	private String value_03;
+
+	@Basic
+	@Column(name = "VALUE_04", nullable = true)
+	private String value_04;
+
+	@Basic
+	@Column(name = "VALUE_05", nullable = true)
+	private String value_05;
+
+	@Basic
+	@Column(name = "VALUE_06", nullable = true)
+	private String value_06;
+
+	@Basic
+	@Column(name = "VALUE_07", nullable = true)
+	private String value_07;
+
+	@Basic
+	@Column(name = "VALUE_08", nullable = true)
+	private String value_08;
+
+	@Basic
+	@Column(name = "VALUE_09", nullable = true)
+	private String value_09;
+
+	@Basic
+	@Column(name = "VALUE_10", nullable = true)
+	private String value_10;
+
+	@Basic
+	@Column(name = "LOCKED", nullable = true)
+	private String locked;
+
+	@Basic
+	@Column(name = "CK_11", nullable = true)
+	private CoreKeyValue ck_11;
+
+	@Basic
+	@Column(name = "CK_12", nullable = true)
+	private CoreKeyValue ck_12;
+
+	@Basic
+	@Column(name = "CK_13", nullable = true)
+	private CoreKeyValue ck_13;
+
+	@Basic
+	@Column(name = "CK_14", nullable = true)
+	private CoreKeyValue ck_14;
+
+	@Basic
+	@Column(name = "CK_15", nullable = true)
+	private CoreKeyValue ck_15;
+
+	@Basic
+	@Column(name = "BOOL_1", nullable = true)
+	private Boolean bool_1;
+
+	@Basic
+	@Column(name = "BOOL_2", nullable = true)
+	private Boolean bool_2;
+
+	@Basic
+	@Column(name = "BOOL_3", nullable = true)
+	private Boolean bool_3;
+
+	@Basic
+	@Column(name = "BOOL_4", nullable = true)
+	private Boolean bool_4;
+
+	@Basic
+	@Column(name = "BOOL_5", nullable = true)
+	private Boolean bool_5;
+
+	@Basic
+	@Column(name = "BOOL_6", nullable = true)
+	private Boolean bool_6;
+
+	@Basic
+	@Column(name = "BOOL_7", nullable = true)
+	private Boolean bool_7;
+
+	@Basic
+	@Column(name = "BOOL_8", nullable = true)
+	private Boolean bool_8;
+
+	@Basic
+	@Column(name = "BOOL_9", nullable = true)
+	private Boolean bool_9;
+
+	@Basic
+	@Column(name = "BOOL_10", nullable = true)
+	private Boolean bool_10;
+
+	@Basic
+	@Column(name = "BYTE_02", nullable = true)
+	private byte[] byte_02;
+
+	@Basic
+	@Column(name = "BYTE_02_NAME", nullable = true)
+	private String byte_02_name;
+
+	@Basic
+	@Column(name = "BOOL_11", nullable = true)
+	private String bool_11;
+
+	@Basic
+	@Column(name = "DATE_06", nullable = true)
+	private Date date_06;
+
+	@Basic
+	@Column(name = "DATE_07", nullable = true)
+	private Date date_07;
+
+	@Basic
+	@Column(name = "DATE_08", nullable = true)
+	private Date date_08;
+
+	@Basic
+	@Column(name = "BYTE_03", nullable = true)
+	private byte[] byte_03;
+
+	@Basic
+	@Column(name = "BYTE_03_NAME", nullable = true)
+	private String byte_03_name;
 
 	public Long getId() {
 		return id;
@@ -429,83 +429,83 @@ public class CoreKeyValue implements Serializable  {
 		this.status = status;
 	}
 
-	public int getCk_01() {
+	public CoreKeyValue getCk_01() {
 		return ck_01;
 	}
 
-	public void setCk_01(int ck_01) {
+	public void setCk_01(CoreKeyValue ck_01) {
 		this.ck_01 = ck_01;
 	}
 
-	public int getCk_02() {
+	public CoreKeyValue getCk_02() {
 		return ck_02;
 	}
 
-	public void setCk_02(int ck_02) {
+	public void setCk_02(CoreKeyValue ck_02) {
 		this.ck_02 = ck_02;
 	}
 
-	public int getCk_03() {
+	public CoreKeyValue getCk_03() {
 		return ck_03;
 	}
 
-	public void setCk_03(int ck_03) {
+	public void setCk_03(CoreKeyValue ck_03) {
 		this.ck_03 = ck_03;
 	}
 
-	public int getCk_04() {
+	public CoreKeyValue getCk_04() {
 		return ck_04;
 	}
 
-	public void setCk_04(int ck_04) {
+	public void setCk_04(CoreKeyValue ck_04) {
 		this.ck_04 = ck_04;
 	}
 
-	public int getCk_05() {
+	public CoreKeyValue getCk_05() {
 		return ck_05;
 	}
 
-	public void setCk_05(int ck_05) {
+	public void setCk_05(CoreKeyValue ck_05) {
 		this.ck_05 = ck_05;
 	}
 
-	public int getCk_06() {
+	public CoreKeyValue getCk_06() {
 		return ck_06;
 	}
 
-	public void setCk_06(int ck_06) {
+	public void setCk_06(CoreKeyValue ck_06) {
 		this.ck_06 = ck_06;
 	}
 
-	public int getCk_07() {
+	public CoreKeyValue getCk_07() {
 		return ck_07;
 	}
 
-	public void setCk_07(int ck_07) {
+	public void setCk_07(CoreKeyValue ck_07) {
 		this.ck_07 = ck_07;
 	}
 
-	public int getCk_08() {
+	public CoreKeyValue getCk_08() {
 		return ck_08;
 	}
 
-	public void setCk_08(int ck_08) {
+	public void setCk_08(CoreKeyValue ck_08) {
 		this.ck_08 = ck_08;
 	}
 
-	public int getCk_09() {
+	public CoreKeyValue getCk_09() {
 		return ck_09;
 	}
 
-	public void setCk_09(int ck_09) {
+	public void setCk_09(CoreKeyValue ck_09) {
 		this.ck_09 = ck_09;
 	}
 
-	public int getCk_10() {
+	public CoreKeyValue getCk_10() {
 		return ck_10;
 	}
 
-	public void setCk_10(int ck_10) {
+	public void setCk_10(CoreKeyValue ck_10) {
 		this.ck_10 = ck_10;
 	}
 
@@ -749,35 +749,35 @@ public class CoreKeyValue implements Serializable  {
 		this.mon_10 = mon_10;
 	}
 
-	public Timestamp getDate_01() {
+	public Date getDate_01() {
 		return date_01;
 	}
 
-	public void setDate_01(Timestamp date_01) {
+	public void setDate_01(Date date_01) {
 		this.date_01 = date_01;
 	}
 
-	public Timestamp getDate_02() {
+	public Date getDate_02() {
 		return date_02;
 	}
 
-	public void setDate_02(Timestamp date_02) {
+	public void setDate_02(Date date_02) {
 		this.date_02 = date_02;
 	}
 
-	public Timestamp getDate_03() {
+	public Date getDate_03() {
 		return date_03;
 	}
 
-	public void setDate_03(Timestamp date_03) {
+	public void setDate_03(Date date_03) {
 		this.date_03 = date_03;
 	}
 
-	public Timestamp getDate_04() {
+	public Date getDate_04() {
 		return date_04;
 	}
 
-	public void setDate_04(Timestamp date_04) {
+	public void setDate_04(Date date_04) {
 		this.date_04 = date_04;
 	}
 
@@ -789,19 +789,19 @@ public class CoreKeyValue implements Serializable  {
 		this.date_05 = date_05;
 	}
 
-	public int getCk_owner() {
+	public CoreKeyValue getCk_owner() {
 		return ck_owner;
 	}
 
-	public void setCk_owner(int ck_owner) {
+	public void setCk_owner(CoreKeyValue ck_owner) {
 		this.ck_owner = ck_owner;
 	}
 
-	public int getEntity_type_id() {
+	public Long getEntity_type_id() {
 		return entity_type_id;
 	}
 
-	public void setEntity_type_id(int entity_type_id) {
+	public void setEntity_type_id(Long entity_type_id) {
 		this.entity_type_id = entity_type_id;
 	}
 
@@ -917,123 +917,123 @@ public class CoreKeyValue implements Serializable  {
 		this.locked = locked;
 	}
 
-	public int getCk_11() {
+	public CoreKeyValue getCk_11() {
 		return ck_11;
 	}
 
-	public void setCk_11(int ck_11) {
+	public void setCk_11(CoreKeyValue ck_11) {
 		this.ck_11 = ck_11;
 	}
 
-	public int getCk_12() {
+	public CoreKeyValue getCk_12() {
 		return ck_12;
 	}
 
-	public void setCk_12(int ck_12) {
+	public void setCk_12(CoreKeyValue ck_12) {
 		this.ck_12 = ck_12;
 	}
 
-	public int getCk_13() {
+	public CoreKeyValue getCk_13() {
 		return ck_13;
 	}
 
-	public void setCk_13(int ck_13) {
+	public void setCk_13(CoreKeyValue ck_13) {
 		this.ck_13 = ck_13;
 	}
 
-	public int getCk_14() {
+	public CoreKeyValue getCk_14() {
 		return ck_14;
 	}
 
-	public void setCk_14(int ck_14) {
+	public void setCk_14(CoreKeyValue ck_14) {
 		this.ck_14 = ck_14;
 	}
 
-	public int getCk_15() {
+	public CoreKeyValue getCk_15() {
 		return ck_15;
 	}
 
-	public void setCk_15(int ck_15) {
+	public void setCk_15(CoreKeyValue ck_15) {
 		this.ck_15 = ck_15;
 	}
 
-	public boolean isBool_1() {
+	public Boolean isBool_1() {
 		return bool_1;
 	}
 
-	public void setBool_1(boolean bool_1) {
+	public void setBool_1(Boolean bool_1) {
 		this.bool_1 = bool_1;
 	}
 
-	public boolean isBool_2() {
+	public Boolean isBool_2() {
 		return bool_2;
 	}
 
-	public void setBool_2(boolean bool_2) {
+	public void setBool_2(Boolean bool_2) {
 		this.bool_2 = bool_2;
 	}
 
-	public boolean isBool_3() {
+	public Boolean isBool_3() {
 		return bool_3;
 	}
 
-	public void setBool_3(boolean bool_3) {
+	public void setBool_3(Boolean bool_3) {
 		this.bool_3 = bool_3;
 	}
 
-	public boolean isBool_4() {
+	public Boolean isBool_4() {
 		return bool_4;
 	}
 
-	public void setBool_4(boolean bool_4) {
+	public void setBool_4(Boolean bool_4) {
 		this.bool_4 = bool_4;
 	}
 
-	public boolean isBool_5() {
+	public Boolean isBool_5() {
 		return bool_5;
 	}
 
-	public void setBool_5(boolean bool_5) {
+	public void setBool_5(Boolean bool_5) {
 		this.bool_5 = bool_5;
 	}
 
-	public boolean isBool_6() {
+	public Boolean isBool_6() {
 		return bool_6;
 	}
 
-	public void setBool_6(boolean bool_6) {
+	public void setBool_6(Boolean bool_6) {
 		this.bool_6 = bool_6;
 	}
 
-	public boolean isBool_7() {
+	public Boolean isBool_7() {
 		return bool_7;
 	}
 
-	public void setBool_7(boolean bool_7) {
+	public void setBool_7(Boolean bool_7) {
 		this.bool_7 = bool_7;
 	}
 
-	public boolean isBool_8() {
+	public Boolean isBool_8() {
 		return bool_8;
 	}
 
-	public void setBool_8(boolean bool_8) {
+	public void setBool_8(Boolean bool_8) {
 		this.bool_8 = bool_8;
 	}
 
-	public boolean isBool_9() {
+	public Boolean isBool_9() {
 		return bool_9;
 	}
 
-	public void setBool_9(boolean bool_9) {
+	public void setBool_9(Boolean bool_9) {
 		this.bool_9 = bool_9;
 	}
 
-	public boolean isBool_10() {
+	public Boolean isBool_10() {
 		return bool_10;
 	}
 
-	public void setBool_10(boolean bool_10) {
+	public void setBool_10(Boolean bool_10) {
 		this.bool_10 = bool_10;
 	}
 
@@ -1061,27 +1061,27 @@ public class CoreKeyValue implements Serializable  {
 		this.bool_11 = bool_11;
 	}
 
-	public Timestamp getDate_06() {
+	public Date getDate_06() {
 		return date_06;
 	}
 
-	public void setDate_06(Timestamp date_06) {
+	public void setDate_06(Date date_06) {
 		this.date_06 = date_06;
 	}
 
-	public Timestamp getDate_07() {
+	public Date getDate_07() {
 		return date_07;
 	}
 
-	public void setDate_07(Timestamp date_07) {
+	public void setDate_07(Date date_07) {
 		this.date_07 = date_07;
 	}
 
-	public Timestamp getDate_08() {
+	public Date getDate_08() {
 		return date_08;
 	}
 
-	public void setDate_08(Timestamp date_08) {
+	public void setDate_08(Date date_08) {
 		this.date_08 = date_08;
 	}
 
